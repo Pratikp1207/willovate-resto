@@ -1,0 +1,431 @@
+/* =================================================
+   CREATE ORDER PAGE
+================================================= */
+
+.create-order-page {
+  margin-left: 230px;
+
+  min-height: 100vh;
+
+  padding: 100px 30px 40px;
+
+  background: #f5f6f8;
+
+  box-sizing: border-box;
+}
+
+
+/* =================================================
+   HEADER
+================================================= */
+
+.create-order-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.create-order-header h1 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+.create-order-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+.create-order-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 12px;
+
+  background: #fff3ed;
+
+  font-size: 26px;
+}
+
+
+/* =================================================
+   ERROR
+================================================= */
+
+.create-order-error {
+  margin: 0 0 20px;
+
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+
+/* =================================================
+   MAIN CARD
+================================================= */
+
+.create-order-card {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.05);
+
+  box-sizing: border-box;
+}
+
+
+/* =================================================
+   FORM
+================================================= */
+
+.create-order-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* =================================================
+   FORM GROUP
+================================================= */
+
+.create-order-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.create-order-form-group label {
+  color: #374151;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =================================================
+   INPUT + SELECT
+================================================= */
+
+.create-order-form-group input,
+.create-order-form-group select {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+.create-order-form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.create-order-form-group input:focus,
+.create-order-form-group select:focus {
+  border-color: #e4572e;
+
+  box-shadow:
+    0 0 0 3px rgba(228, 87, 46, 0.1);
+}
+
+
+/* =================================================
+   NO TABLE MESSAGE
+================================================= */
+
+.no-tables-message {
+  margin: 2px 0 0;
+
+  color: #dc2626;
+
+  font-size: 12px;
+}
+
+
+/* =================================================
+   PRICE BOX
+================================================= */
+
+.create-order-price-box {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 15px;
+
+  border-radius: 9px;
+
+  background: #f9fafb;
+
+  border: 1px solid #e5e7eb;
+}
+
+.create-order-price-box span {
+  color: #6b7280;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.create-order-price-box strong {
+  color: #111827;
+
+  font-size: 18px;
+}
+
+
+/* =================================================
+   TOTAL
+================================================= */
+
+.create-order-total {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 18px 0;
+
+  border-top: 1px dashed #d1d5db;
+
+  border-bottom: 1px dashed #d1d5db;
+}
+
+.create-order-total span {
+  color: #6b7280;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+.create-order-total strong {
+  color: #e4572e;
+
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+
+/* =================================================
+   BUTTON
+================================================= */
+
+.create-order-btn {
+  width: 100%;
+
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #e4572e;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.create-order-btn:hover {
+  background: #c9431e;
+
+  transform: translateY(-1px);
+}
+
+.create-order-btn:disabled {
+  background: #9ca3af;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =================================================
+   TABLET
+================================================= */
+
+@media (max-width: 800px) {
+
+  .create-order-page {
+    margin-left: 0;
+
+    padding:
+      95px
+      20px
+      30px;
+  }
+
+  .create-order-card {
+    padding: 25px;
+  }
+
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 600px) {
+
+  .create-order-page {
+    margin-left: 0;
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    padding:
+      90px
+      15px
+      25px;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+
+  .create-order-header {
+    margin-bottom: 22px;
+  }
+
+  .create-order-header h1 {
+    font-size: 25px;
+  }
+
+  .create-order-header p {
+    font-size: 12px;
+  }
+
+  .create-order-icon {
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 21px;
+  }
+
+  .create-order-card {
+    padding: 20px;
+
+    border-radius: 12px;
+  }
+
+  .create-order-form {
+    gap: 17px;
+  }
+
+  .create-order-form-group label {
+    font-size: 13px;
+  }
+
+  .create-order-form-group input,
+  .create-order-form-group select {
+    padding: 11px 12px;
+
+    font-size: 13px;
+  }
+
+  .create-order-total strong {
+    font-size: 22px;
+  }
+
+}
+
+
+/* =================================================
+   SMALL MOBILE
+================================================= */
+
+@media (max-width: 350px) {
+
+  .create-order-page {
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+  .create-order-card {
+    padding: 17px;
+  }
+
+  .create-order-header h1 {
+    font-size: 22px;
+  }
+
+  .create-order-total strong {
+    font-size: 20px;
+  }
+
+}

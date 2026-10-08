@@ -1,0 +1,396 @@
+
+/* =================================================
+   NAVBAR
+================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 30px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  box-sizing: border-box;
+
+  z-index: 1000;
+}
+
+
+/* =================================================
+   HAMBURGER
+================================================= */
+
+.hamburger-btn {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  color: #111827;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  padding: 5px;
+
+  margin-right: 12px;
+}
+
+
+/* =================================================
+   LOGO
+================================================= */
+
+.navbar-logo {
+  min-width: 220px;
+}
+
+.navbar-logo h2 {
+  margin: 0;
+
+  color: #1f2937;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =================================================
+   USER
+================================================= */
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-left: 25px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+.navbar-user strong {
+  color: #111827;
+
+  font-weight: 600;
+}
+
+
+/* =================================================
+   NAVIGATION
+================================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  margin-left: auto;
+}
+
+.navbar-links a {
+  color: #4b5563;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #e4572e;
+}
+
+
+/* =================================================
+   LOGOUT
+================================================= */
+
+.logout-btn {
+  margin-left: 25px;
+
+  border: none;
+
+  background: #e4572e;
+
+  color: #ffffff;
+
+  padding: 9px 17px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #c9431e;
+
+  transform: translateY(-1px);
+}
+
+
+/* =================================================
+   LAPTOP
+   1001px - 1100px
+================================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-logo {
+    min-width: 190px;
+  }
+
+  .navbar-links {
+    gap: 14px;
+  }
+
+  .navbar-links a {
+    font-size: 13px;
+  }
+
+  /* USER REMAINS VISIBLE */
+
+  .navbar-user {
+    display: flex;
+
+    margin-left: 15px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =================================================
+   TABLET / MOBILE
+   <= 800px
+================================================= */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    height: 70px;
+
+    padding: 0 15px;
+  }
+
+
+  /* HAMBURGER */
+
+  .hamburger-btn {
+    display: block;
+
+    flex-shrink: 0;
+  }
+
+
+  /* LOGO */
+
+  .navbar-logo {
+    min-width: 0;
+
+    flex-shrink: 1;
+  }
+
+  .navbar-logo h2 {
+    font-size: 18px;
+
+    white-space: nowrap;
+  }
+
+
+  /* HIDE DESKTOP LINKS */
+
+  .navbar-links {
+    display: none;
+  }
+
+
+  /* USER */
+
+  .navbar-user {
+    display: flex;
+
+    margin-left: 10px;
+
+    gap: 4px;
+
+    font-size: 12px;
+
+    min-width: 0;
+
+    flex-shrink: 1;
+  }
+
+  /* Hide "Welcome," */
+
+  .navbar-user span {
+    display: none;
+  }
+
+  /* Username */
+
+  .navbar-user strong {
+    display: block;
+
+    max-width: 80px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+  }
+
+
+  /* LOGOUT */
+
+  .logout-btn {
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+    padding: 8px 13px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =================================================
+   MOBILE
+   <= 500px
+================================================= */
+
+@media (max-width: 500px) {
+
+  .navbar {
+    padding: 0 12px;
+  }
+
+
+  /* HAMBURGER */
+
+  .hamburger-btn {
+    font-size: 23px;
+
+    margin-right: 7px;
+  }
+
+
+  /* LOGO */
+
+  .navbar-logo h2 {
+    font-size: 17px;
+  }
+
+
+  /* USER */
+
+  .navbar-user {
+    margin-left: 7px;
+
+    font-size: 11px;
+  }
+
+  .navbar-user strong {
+    max-width: 65px;
+  }
+
+
+  /* LOGOUT */
+
+  .logout-btn {
+    padding: 7px 11px;
+
+    font-size: 12px;
+
+    border-radius: 6px;
+  }
+
+}
+
+
+/* =================================================
+   SMALL MOBILE
+   <= 350px
+================================================= */
+
+@media (max-width: 350px) {
+
+  .navbar {
+    padding: 0 8px;
+  }
+
+
+  /* HAMBURGER */
+
+  .hamburger-btn {
+    font-size: 21px;
+
+    margin-right: 4px;
+  }
+
+
+  /* LOGO */
+
+  .navbar-logo h2 {
+    font-size: 15px;
+  }
+
+
+  /* USER */
+
+  .navbar-user {
+    margin-left: 5px;
+
+    font-size: 10px;
+  }
+
+  .navbar-user strong {
+    max-width: 50px;
+  }
+
+
+  /* LOGOUT */
+
+  .logout-btn {
+    padding: 6px 9px;
+
+    font-size: 11px;
+  }
+
+}

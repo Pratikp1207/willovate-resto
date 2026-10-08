@@ -1,0 +1,551 @@
+
+/* =========================
+   CATEGORIES PAGE
+========================= */
+
+.categories-page {
+  margin-left: 230px;
+
+  min-height: 100vh;
+
+  padding: 100px 30px 40px;
+
+  background: #f5f6f8;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.categories-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+
+.categories-header h1 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 30px;
+}
+
+
+.categories-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   COUNT
+========================= */
+
+.category-count {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 90px;
+
+  height: 75px;
+
+  border-radius: 12px;
+
+  background: #fff3ed;
+
+  color: #e4572e;
+}
+
+
+.category-count span {
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+
+.category-count small {
+  font-size: 11px;
+
+  color: #9a3412;
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.category-form-card {
+  padding: 25px;
+
+  margin-bottom: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.category-form-card h2 {
+  margin: 0 0 20px;
+
+  color: #111827;
+
+  font-size: 19px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.category-form {
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 15px;
+}
+
+
+.category-input-group {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.category-input-group label {
+  color: #374151;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+.category-input-group input {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+
+.category-input-group input:focus {
+  border-color: #e4572e;
+
+  box-shadow:
+    0 0 0 3px rgba(228, 87, 46, 0.1);
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+.category-form-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+
+.category-submit-btn,
+.category-cancel-btn {
+  height: 42px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.category-submit-btn {
+  background: #e4572e;
+
+  color: #ffffff;
+}
+
+
+.category-submit-btn:hover {
+  background: #c9431e;
+}
+
+
+.category-cancel-btn {
+  background: #f3f4f6;
+
+  color: #374151;
+}
+
+
+.category-cancel-btn:hover {
+  background: #e5e7eb;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.category-list-section {
+  background: #ffffff;
+
+  padding: 25px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.section-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 20px;
+}
+
+
+.section-heading span {
+  color: #9ca3af;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   CATEGORY GRID
+========================= */
+
+.category-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+
+/* =========================
+   CATEGORY CARD
+========================= */
+
+.category-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 16px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition: 0.2s ease;
+}
+
+
+.category-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.category-card-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 42px;
+  height: 42px;
+
+  border-radius: 9px;
+
+  background: #fff3ed;
+
+  font-size: 19px;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.category-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.category-info h3 {
+  margin: 0 0 4px;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.category-info p {
+  margin: 0;
+
+  color: #9ca3af;
+
+  font-size: 11px;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.category-actions {
+  display: flex;
+
+  gap: 6px;
+}
+
+
+.category-actions button {
+  padding: 7px 10px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.category-edit-btn {
+  background: #111827;
+
+  color: #ffffff;
+}
+
+
+.category-edit-btn:hover {
+  background: #374151;
+}
+
+
+.category-delete-btn {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+
+.category-delete-btn:hover {
+  background: #fecaca;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.no-categories {
+  padding: 50px 20px;
+
+  text-align: center;
+}
+
+
+.empty-icon {
+  margin-bottom: 10px;
+
+  font-size: 35px;
+}
+
+
+.no-categories h3 {
+  margin: 0 0 7px;
+
+  color: #374151;
+
+  font-size: 17px;
+}
+
+
+.no-categories p {
+  margin: 0;
+
+  color: #9ca3af;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .category-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .categories-page {
+    margin-left: 200px;
+
+    padding:
+      100px
+      20px
+      30px;
+  }
+
+  .category-form {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .category-form-actions {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .categories-page {
+    margin-left: 0;
+
+    padding:
+      90px
+      15px
+      25px;
+  }
+
+  .categories-header {
+    align-items: flex-start;
+  }
+
+  .categories-header h1 {
+    font-size: 25px;
+  }
+
+  .category-count {
+    min-width: 70px;
+
+    height: 65px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    flex-wrap: wrap;
+  }
+
+  .category-actions {
+    width: 100%;
+  }
+
+  .category-actions button {
+    flex: 1;
+  }
+
+}

@@ -1,0 +1,511 @@
+/* =========================
+   ORDERS PAGE
+========================= */
+
+.orders-page {
+  margin-left: 230px;
+
+  min-height: 100vh;
+
+  padding: 100px 30px 40px;
+
+  background: #f5f6f8;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.orders-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+
+.orders-header h1 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 30px;
+}
+
+
+.orders-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   ORDER COUNT
+========================= */
+
+.orders-count {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 100px;
+
+  height: 75px;
+
+  border-radius: 12px;
+
+  background: #fff3ed;
+
+  color: #e4572e;
+}
+
+
+.orders-count span {
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+
+.orders-count small {
+  color: #9a3412;
+
+  font-size: 11px;
+}
+
+
+/* =========================
+   ORDERS GRID
+========================= */
+
+.orders-container {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================
+   ORDER CARD
+========================= */
+
+.order-card {
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.order-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   ORDER HEADER
+========================= */
+
+.order-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding-bottom: 17px;
+
+  margin-bottom: 17px;
+
+  border-bottom: 1px solid #f0f0f0;
+}
+
+
+.order-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #9ca3af;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.order-header h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 17px;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.order-status {
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  background: #f3f4f6;
+
+  color: #374151;
+}
+
+
+/* Pending */
+
+.order-status.pending {
+  background: #fef3c7;
+
+  color: #92400e;
+}
+
+
+/* Preparing */
+
+.order-status.preparing {
+  background: #dbeafe;
+
+  color: #1d4ed8;
+}
+
+
+/* Completed */
+
+.order-status.completed {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+
+/* Cancelled */
+
+.order-status.cancelled {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.order-detail {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 9px 0;
+}
+
+
+.order-detail span {
+  color: #9ca3af;
+
+  font-size: 13px;
+}
+
+
+.order-detail strong {
+  color: #374151;
+
+  font-size: 13px;
+
+  text-align: right;
+}
+
+
+/* =========================
+   AMOUNT
+========================= */
+
+.order-amount {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 10px;
+
+  padding: 15px 0;
+
+  border-top: 1px dashed #e5e7eb;
+
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+
+.order-amount span {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+.order-amount strong {
+  color: #111827;
+
+  font-size: 20px;
+}
+
+
+/* =========================
+   STATUS CONTROL
+========================= */
+
+.order-status-control {
+  margin-top: 18px;
+}
+
+
+.order-status-control label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #374151;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+.order-status-control select {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+
+.order-status-control select:focus {
+  border-color: #e4572e;
+
+  box-shadow:
+    0 0 0 3px rgba(228, 87, 46, 0.1);
+}
+
+
+/* =========================
+   DELETE
+========================= */
+
+.delete-order-btn {
+  width: 100%;
+
+  margin-top: 12px;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.delete-order-btn:hover {
+  background: #fecaca;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.orders-loading {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  color: #6b7280;
+
+  text-align: center;
+}
+
+
+/* =========================
+   EMPTY
+========================= */
+
+.no-orders {
+  padding: 70px 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  text-align: center;
+}
+
+
+.empty-order-icon {
+  margin-bottom: 10px;
+
+  font-size: 40px;
+}
+
+
+.no-orders h2 {
+  margin: 0 0 7px;
+
+  color: #374151;
+
+  font-size: 20px;
+}
+
+
+.no-orders p {
+  margin: 0;
+
+  color: #9ca3af;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .orders-container {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+  .orders-page {
+    margin-left: 200px;
+
+    padding:
+      100px
+      20px
+      30px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .orders-page {
+    margin-left: 0;
+
+    padding:
+      90px
+      15px
+      25px;
+  }
+
+  .orders-header {
+    align-items: flex-start;
+  }
+
+  .orders-header h1 {
+    font-size: 25px;
+  }
+
+  .orders-count {
+    min-width: 75px;
+
+    height: 65px;
+  }
+
+  .orders-container {
+    grid-template-columns: 1fr;
+  }
+
+}

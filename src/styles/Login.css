@@ -1,0 +1,854 @@
+/* =========================================================
+   LOGIN PAGE
+========================================================= */
+
+.login-page {
+    position: relative;
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7f2 0%,
+            #ffffff 50%,
+            #fff3ed 100%
+        );
+}
+
+
+/* =========================================================
+   LOGIN CARD
+========================================================= */
+
+.login-card {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+    max-width: 430px;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.10);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   RESTAURANT LOGO
+========================================================= */
+
+.restaurant-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+}
+
+.logo-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #fff3ed;
+
+    border-radius: 14px;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 5px 15px rgba(228, 87, 46, 0.10);
+}
+
+.restaurant-logo h1 {
+    margin: 0 0 2px;
+
+    color: #111827;
+
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.restaurant-logo span {
+    color: #e4572e;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================================================
+   LOGIN HEADING
+========================================================= */
+
+.login-heading {
+    margin-bottom: 25px;
+}
+
+.login-heading h2 {
+    margin: 0 0 7px;
+
+    color: #111827;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.login-heading p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.login-error {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    background: #fee2e2;
+
+    border: 1px solid #fecaca;
+
+    color: #dc2626;
+}
+
+.login-error span {
+    flex-shrink: 0;
+
+    font-size: 15px;
+}
+
+.login-error p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.login-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 19px;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+========================================================= */
+
+.input-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.input-group label {
+    color: #374151;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.input-icon {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #9ca3af;
+
+    font-size: 16px;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-wrapper input {
+    width: 100%;
+    height: 50px;
+
+    padding:
+        0 45px
+        0 43px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: #9ca3af;
+}
+
+.input-wrapper input:focus {
+    border-color: #e4572e;
+
+    box-shadow:
+        0 0 0 3px rgba(228, 87, 46, 0.10);
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+========================================================= */
+
+.password-toggle {
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: background 0.2s ease;
+}
+
+.password-toggle:hover {
+    background: #f3f4f6;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-button {
+    width: 100%;
+    height: 51px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 3px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #e4572e;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-button:hover {
+    background: #c9431e;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px rgba(228, 87, 46, 0.20);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.login-button:disabled {
+    background: #9ca3af;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.spinner {
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation: login-spin 0.7s linear infinite;
+}
+
+@keyframes login-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.login-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #f0f0f0;
+}
+
+.login-footer span {
+    font-size: 15px;
+}
+
+.login-footer p {
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BACKGROUND CIRCLES
+========================================================= */
+
+.login-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.circle-one {
+    width: 300px;
+    height: 300px;
+
+    top: -140px;
+    left: -120px;
+
+    background: rgba(228, 87, 46, 0.08);
+}
+
+.circle-two {
+    width: 260px;
+    height: 260px;
+
+    right: -100px;
+    bottom: -100px;
+
+    background: rgba(228, 87, 46, 0.07);
+}
+
+.circle-three {
+    width: 150px;
+    height: 150px;
+
+    top: 15%;
+    right: 12%;
+
+    background: rgba(228, 87, 46, 0.04);
+}
+
+
+/* =========================================================
+   FLOATING FOOD
+========================================================= */
+
+.floating-food {
+    position: absolute;
+
+    z-index: 1;
+
+    font-size: 42px;
+
+    opacity: 0.25;
+
+    pointer-events: none;
+
+    animation: floating-food 4s ease-in-out infinite;
+}
+
+.food-one {
+    top: 12%;
+    left: 10%;
+}
+
+.food-two {
+    top: 18%;
+    right: 10%;
+
+    animation-delay: 1s;
+}
+
+.food-three {
+    bottom: 15%;
+    left: 12%;
+
+    animation-delay: 2s;
+}
+
+.food-four {
+    bottom: 12%;
+    right: 13%;
+
+    animation-delay: 1.5s;
+}
+
+@keyframes floating-food {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1200px+
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .login-page {
+        padding: 40px;
+    }
+
+    .login-card {
+        max-width: 460px;
+
+        padding: 45px;
+    }
+
+    .login-heading h2 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+   769px - 1199px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+    .login-page {
+        padding: 30px;
+    }
+
+    .login-card {
+        width: 100%;
+
+        max-width: 440px;
+
+        padding: 38px;
+    }
+
+    .floating-food {
+        font-size: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   601px - 768px
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 768px) {
+
+    .login-page {
+        min-height: 100vh;
+
+        padding: 25px;
+    }
+
+    .login-card {
+        width: 100%;
+
+        max-width: 420px;
+
+        padding: 35px 30px;
+    }
+
+    .login-heading h2 {
+        font-size: 26px;
+    }
+
+    .floating-food {
+        font-size: 32px;
+    }
+
+    .food-one {
+        left: 5%;
+    }
+
+    .food-two {
+        right: 5%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   0px - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .login-page {
+        min-height: 100svh;
+
+        width: 100%;
+
+        padding: 18px;
+
+        overflow-x: hidden;
+    }
+
+    .login-card {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 28px 20px;
+
+        border-radius: 18px;
+    }
+
+    .restaurant-logo {
+        margin-bottom: 20px;
+    }
+
+    .logo-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 23px;
+
+        border-radius: 12px;
+    }
+
+    .restaurant-logo h1 {
+        font-size: 21px;
+    }
+
+    .restaurant-logo span {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .login-heading {
+        margin-bottom: 22px;
+    }
+
+    .login-heading h2 {
+        font-size: 23px;
+
+        margin-bottom: 6px;
+    }
+
+    .login-heading p {
+        font-size: 13px;
+    }
+
+    .login-form {
+        gap: 17px;
+    }
+
+    .input-group label {
+        font-size: 13px;
+    }
+
+    .input-wrapper input {
+        height: 48px;
+
+        font-size: 14px;
+
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+
+    .login-button {
+        height: 50px;
+
+        font-size: 14px;
+
+        margin-top: 3px;
+    }
+
+    .login-footer {
+        margin-top: 20px;
+
+        padding-top: 17px;
+    }
+
+    .login-footer p {
+        font-size: 11px;
+    }
+
+    .floating-food {
+        font-size: 27px;
+
+        opacity: 0.35;
+    }
+
+    .food-one {
+        top: 5%;
+        left: 4%;
+    }
+
+    .food-two {
+        top: 7%;
+        right: 4%;
+    }
+
+    .food-three,
+    .food-four {
+        display: none;
+    }
+
+    .circle-one {
+        width: 220px;
+        height: 220px;
+
+        top: -100px;
+        left: -100px;
+    }
+
+    .circle-two {
+        width: 190px;
+        height: 190px;
+
+        bottom: -90px;
+        right: -80px;
+    }
+
+    .circle-three {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   0px - 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .login-page {
+        padding: 12px;
+    }
+
+    .login-card {
+        padding: 25px 17px;
+
+        border-radius: 16px;
+    }
+
+    .restaurant-logo {
+        gap: 9px;
+    }
+
+    .logo-icon {
+        width: 44px;
+        height: 44px;
+
+        font-size: 21px;
+    }
+
+    .restaurant-logo h1 {
+        font-size: 19px;
+    }
+
+    .login-heading h2 {
+        font-size: 21px;
+    }
+
+    .login-heading p {
+        font-size: 12px;
+    }
+
+    .input-wrapper input {
+        height: 46px;
+
+        font-size: 13px;
+    }
+
+    .login-button {
+        height: 48px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   350px and below
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .login-page {
+        padding: 8px;
+    }
+
+    .login-card {
+        padding: 22px 14px;
+    }
+
+    .login-heading h2 {
+        font-size: 20px;
+    }
+
+    .restaurant-logo h1 {
+        font-size: 18px;
+    }
+
+    .login-button {
+        font-size: 12px;
+    }
+
+}

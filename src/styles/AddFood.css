@@ -1,0 +1,316 @@
+/* =========================
+   ADD FOOD PAGE
+========================= */
+
+.add-food-page {
+  margin-left: 230px;
+
+  min-height: 100vh;
+
+  padding: 100px 30px 40px;
+
+  background: #f5f6f8;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.add-food-container {
+  max-width: 750px;
+
+  margin: 0 auto;
+
+  background: #ffffff;
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.add-food-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.add-food-header h1 {
+  margin: 0 0 7px;
+
+  color: #111827;
+
+  font-size: 28px;
+}
+
+
+.add-food-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+.add-food-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 12px;
+
+  background: #fff3ed;
+
+  font-size: 26px;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error-message {
+  margin: 0 0 20px;
+
+  padding: 12px 15px;
+
+  border-radius: 8px;
+
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.add-food-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.form-group label {
+  color: #374151;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   INPUT + SELECT
+========================= */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #e4572e;
+
+  box-shadow:
+    0 0 0 3px rgba(228, 87, 46, 0.1);
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.price-input {
+  position: relative;
+}
+
+
+.price-input span {
+  position: absolute;
+
+  left: 14px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #6b7280;
+
+  font-weight: 600;
+}
+
+
+.price-input input {
+  padding-left: 32px;
+}
+
+
+/* =========================
+   SMALL TEXT
+========================= */
+
+.form-group small {
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.add-food-btn {
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #e4572e;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.add-food-btn:hover {
+  background: #c9431e;
+
+  transform: translateY(-1px);
+}
+
+
+.add-food-btn:disabled {
+  background: #9ca3af;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .add-food-page {
+    margin-left: 200px;
+
+    padding:
+      95px
+      20px
+      30px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .add-food-page {
+    margin-left: 0;
+
+    padding:
+      90px
+      15px
+      25px;
+  }
+
+  .add-food-container {
+    padding: 20px;
+
+    border-radius: 12px;
+  }
+
+  .add-food-header h1 {
+    font-size: 24px;
+  }
+
+}
+
