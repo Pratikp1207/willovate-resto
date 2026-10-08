@@ -22,6 +22,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Menu from "./pages/Menu";
 import AddFood from "./pages/AddFood";
@@ -338,6 +339,11 @@ function App() {
           element={
             <Login onLogin={() => setIsAuthenticated(true)} />
           }
+        />
+
+        <Route
+          path="/register"
+          element={<Register />}
         />
 
 

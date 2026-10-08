@@ -4,7 +4,7 @@ Willovate Resto is a restaurant-management web application with a React dashboar
 
 ## Features
 
-- Sign in with a JWT-backed account.
+- Register an account and sign in with JWT-backed authentication.
 - View a dashboard with food, order, table, and order-amount summaries.
 - Search and filter menu items by category; add, edit, and delete foods.
 - Create, edit, and delete food categories.
@@ -12,7 +12,7 @@ Willovate Resto is a restaurant-management web application with a React dashboar
 - Create orders for a customer, food item, quantity, and available table; update order status or delete orders.
 - Persist application data in MongoDB through Mongoose.
 
-There is no preconfigured account or seed data. The backend provides an account-registration API; the frontend currently provides a login screen but no registration screen.
+There is no preconfigured account or seed data. Create an account from the frontend Register page before signing in.
 
 ## Tech stack
 
@@ -142,7 +142,7 @@ Open the local URL printed by Vite (normally `http://localhost:5173`).
 
 ### 7. Use the application
 
-There is no default user. Create an account by sending a `POST` request to `/api/auth/register` with JSON fields `name`, `email`, and `password` (minimum six characters), then sign in from the frontend with that email and password. Once signed in, create categories, foods, and tables before creating orders.
+There is no default user. Select **Create Account / Register** on the login screen and submit a name, email, and password (minimum six characters). After registration, log in with that email and password. Alternatively, create an account by sending a `POST` request to `/api/auth/register` with JSON fields `name`, `email`, and `password`. Once signed in, create categories, foods, and tables before creating orders.
 
 For example, from PowerShell with the backend running, replace the sample values before sending:
 
@@ -178,7 +178,7 @@ After a successful login, the API returns a JWT and a user summary. The frontend
 - **Backend exits before listening:** Check that `backend\.env` exists, that `MONGO_URI` and `JWT_SECRET` are set, and that MongoDB is running and reachable.
 - **MongoDB connection failure:** Check the MongoDB service, the URI/database access settings, and Atlas network access if using Atlas.
 - **Port 5000 is already in use:** Stop the other service or set a free `PORT` in `backend\.env`; if it changes, set the matching `VITE_API_URL` in the root `.env` and restart Vite.
-- **Login returns an authentication error:** Register an account using `POST /api/auth/register` first, then use the same email and password on the login screen.
+- **Login returns an authentication error:** Register an account from the frontend or using `POST /api/auth/register` first, then use the same email and password on the login screen.
 - **Frontend cannot reach the API:** Confirm the backend is running, check `VITE_API_URL` (if configured), and restart Vite after changing frontend environment variables.
 - **Dependency or Vite engine errors:** Use a supported Node.js version listed under Prerequisites, then run `npm install` in the project root and `backend`.
 
@@ -196,7 +196,6 @@ The backend currently has no automated test suite. `npm start` and `npm run dev`
 ## Future improvements
 
 - Add automated backend/API tests.
-- Add a frontend account-registration screen and richer form validation.
 - Add more detailed operational and reporting views.
 - Configure deployment-specific CORS and production hosting settings.
 

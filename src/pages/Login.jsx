@@ -1,12 +1,14 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { loginUser } from "../services/authService";
 import "../styles/Login.css";
 
 function Login({ onLogin }) {
 
-  const [email, setEmail] = useState("");
+  const location = useLocation();
+
+  const [email, setEmail] = useState(location.state?.email || "");
   const [password, setPassword] = useState("");
 
   const [loading, setLoading] = useState(false);
@@ -15,6 +17,7 @@ function Login({ onLogin }) {
   const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
+  const registrationSuccess = location.state?.registrationSuccess;
 
   // =========================
   // LOGIN
@@ -175,6 +178,12 @@ function Login({ onLogin }) {
 
         </div>
 
+        {registrationSuccess && (
+          <div className="login-success" role="status">
+            Your account has been created. Please log in.
+          </div>
+        )}
+
 
         {/* Error */}
 
@@ -310,6 +319,13 @@ function Login({ onLogin }) {
             )}
 
           </button>
+
+          <Link
+            to="/register"
+            className="register-button"
+          >
+            Create Account / Register
+          </Link>
 
         </form>
 
