@@ -140,6 +140,12 @@ npm run dev
 
 Open the local URL printed by Vite (normally `http://localhost:5173`).
 
+## Production deployment
+
+The frontend is deployed on Vercel at [willovate-resto.vercel.app](https://willovate-resto.vercel.app), and the backend is deployed on Render at `https://willovate-resto.onrender.com`. In the Vercel project, use the repository root as the project root, build with `npm run build`, and use `dist` as the output directory. Set the `VITE_API_URL` environment variable for Production to `https://willovate-resto.onrender.com/api`; it is a public API base URL, not a place for credentials. The Vercel project is connected to GitHub and production deployments are associated with `main`.
+
+The Vercel rewrite in `vercel.json` serves the React app for client-side routes such as `/register`, including when a route is opened directly or refreshed. Keep backend credentials in Render environment settings and never put them in frontend variables.
+
 ### 7. Use the application
 
 There is no default user. Select **Create Account / Register** on the login screen and submit a name, email, and password (minimum six characters). After registration, log in with that email and password. Alternatively, create an account by sending a `POST` request to `/api/auth/register` with JSON fields `name`, `email`, and `password`. Once signed in, create categories, foods, and tables before creating orders.
